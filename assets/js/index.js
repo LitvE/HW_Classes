@@ -39,8 +39,25 @@ class Author {
     }
 }
 
+class Work {
+    constructor(title){
+        this.title = title;
+    }
+
+    print(){
+        console.log(this.title);
+    }
+}
+
 let testAuthor1 = new Author('Isaac', 'Asimov');
 
+let testWorks = [ new Work('Foundation'), new Work('Foundation and Empire'), new Work('Second Foundation'), new Work("Foundation's Edge"), new Work('Prelude to Foundation'), new Work('Foundation and Earth'), new Work('Forward the Foundation')];
+
+testWorks.forEach(element => {
+    testAuthor1.addWork(element.title);
+});
+
+/*
 testAuthor1.addWork('Foundation');
 testAuthor1.addWork('Foundation and Empire');
 testAuthor1.addWork('Second Foundation');
@@ -48,6 +65,7 @@ testAuthor1.addWork("Foundation's Edge");
 testAuthor1.addWork('Prelude to Foundation');
 testAuthor1.addWork('Foundation and Earth');
 testAuthor1.addWork('Forward the Foundation');
+*/
 
 Author.getAmount();
 
